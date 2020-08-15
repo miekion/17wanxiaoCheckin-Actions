@@ -29,18 +29,20 @@ areaStr = json.dumps(area, ensure_ascii=False)
 jsons = {"businessType": "epmpics", "method": "submitUpInfo",
         "jsonData": {"deptStr": {"deptid": deptId, "text": text},
                      "areaStr": areaStr,
-                     "reportdate": round(time.time()*1000), "customerid": "1999", "deptid": deptId, "source": "alipay",
+                     "reportdate": round(time.time()*1000), "customerid": "974", "deptid": deptId, "source": "app",
                      "templateid": "pneumonia", "stuNo": stuNum, "username": userName, "phonenum": phoneNum,
-                     "userid": userId, "updatainfo": [{"propertyname": "bodyzk", "value": "正常温度(小于37.3)"},
-                                                          {"propertyname": "istouchcb", "value": "自己家中"},
-                                                          {"propertyname": "sfwz2", "value": "内地学生"},
-                                                          {"propertyname": "symptom", "value": "无"},
-                                                          {"propertyname": "homehealth", "value": "无"},
-                                                          {"propertyname": "isConfirmed", "value": "无"},
-                                                          {"propertyname": "ownbodyzk", "value": "良好"},
-                                                          {"propertyname": "ishborwh", "value": "无"},
-                                                          {"propertyname": "outdoor", "value": "绿色"},
-                                                          {"propertyname": "isContactFriendIn14", "value": "没有"},
+                     "userid": userId, "updatainfo": [{"propertyname": "temperature", "value": "35.4"},
+                                                          {"propertyname": "symptom", "value": "无症状"},
+                                                          {"propertyname": "isConfirmed", "value": "否"},
+                                                          {"propertyname": "isdefinde", "value": "否.未隔离"},
+                                                          {"propertyname": "isGoWarningAdress", "value": "否"},
+                                                          {"propertyname": "isTouch", "value": "否"},
+                                                          {"propertyname": "isTransitArea", "value": "否"},
+                                                          {"propertyname": "homehealth", "value": "无症状"},
+                                                          {"propertyname": "xinqing", "value": "健康"},
+                                                          {"propertyname": "bodyzk", "value": "是"},
+                                                          {"propertyname": "cxjh", "value": "否"},
+                                                          {"propertyname": "isAlreadyInSchool", "value": "没有"},
                                                           {"propertyname": "ownPhone", "value": phoneNum},
                                                           {"propertyname": "emergencyContact", "value": emergency},
                                                           {"propertyname": "mergencyPeoplePhone",
@@ -80,10 +82,6 @@ desp = f"""
 {date}天
 ```
 
->
-> [GitHub项目地址](https://github.com/ReaJason/17wanxiaoCheckin-Actions) 
->
->期待你给项目的star✨
 """
 
 headers = {
